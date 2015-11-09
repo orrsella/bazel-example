@@ -1,6 +1,8 @@
 # bazel-example
 
-## Requirements
+## Installation
+
+### Linux
 
 - Install JDK:
 
@@ -29,10 +31,19 @@ $ sudo dpkg -i scala-2.11.7.deb
 $ git clone https://github.com/bazelbuild/bazel.git
 $ cd bazel
 $ ./compile.sh
+$ export PATH="$PATH:$(pwd)/output"
 ```
 
-- Add `bazel` to `PATH`:
+### OS X
+
+Download installation from [Bazel releases](https://github.com/bazelbuild/bazel/releases) and:
 
 ```bash
-$ export PATH="$PATH:$(pwd)/output"
+$ sudo ./bazel-0.1.1-installer-darwin-x86_64.sh --bin=/usr/local/bin
+```
+
+- Create symlink for `scalac`:
+
+```bash
+$ sudo ln -s /usr/local/bin/scalac /usr/bin/scalac
 ```
