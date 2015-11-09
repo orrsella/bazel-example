@@ -8,5 +8,5 @@ scala_binary(
         "//third_party:scala-library",
         "//mixed-lib/src/main/java/com/example:java",
         "//mixed-lib/src/main/scala/com/example:scala",
-    ]
+    ],
 )
