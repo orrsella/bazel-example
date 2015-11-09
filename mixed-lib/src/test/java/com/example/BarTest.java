@@ -9,9 +9,4 @@ public class BarTest {
   public void testBar() {
     Assert.assertEquals("Hello " + Constants.NAME, Bar.hello());
   }
-
-  @Test
-  public void testBaz() {
-    Assert.assertEquals(20, new Baz().age());
-  }
 }
