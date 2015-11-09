@@ -9,8 +9,8 @@ class HelloWorldScalaTest extends WordSpec {
 
   "Baz" should {
     "have the correct age" in {
-      val baz = new Baz
-      assert(baz.age === 20)
+      assert(new Baz().age === 20)
+      assert(1 === 2)
     }
   }
 }

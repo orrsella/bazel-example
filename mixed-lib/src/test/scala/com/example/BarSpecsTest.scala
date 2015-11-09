@@ -10,6 +10,7 @@ class BarTest extends Specification {
   "Bar" should {
     "have the correct string" in {
       Bar.hello must_== "Hello " + Constants.NAME
+      1 must_== 2
     }
   }
 }

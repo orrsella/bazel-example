@@ -30,11 +30,16 @@ java_import(
     ],
 )
 
-
-
 java_import(
     name = "scalatest",
     jars = [
         "scalatest/scalatest_2.11-2.2.4.jar",
+    ],
+)
+
+java_import(
+    name = "scala-library",
+    jars = [
+        "scala-library/scala-library-2.11.7.jar",
     ],
 )
