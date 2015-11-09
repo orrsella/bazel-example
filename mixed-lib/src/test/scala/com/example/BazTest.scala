@@ -1,15 +1,15 @@
 package com.example
 
 import org.junit.runner.RunWith
-import org.specs2.mutable.Specification
-import org.specs2.runner.JUnitRunner
+import org.scalatest.junit.JUnitRunner
+import org.scalatest.WordSpec
 
 @RunWith(classOf[JUnitRunner])
-class BazTest extends Specification {
+class HelloWorldScalaTest extends WordSpec {
 
   "Baz" should {
     "have the correct age" in {
-      new Baz.age must_== 20
+      assert(new Baz.age === 20)
     }
   }
 }
