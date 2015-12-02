@@ -27,6 +27,7 @@ java_import(
         "scalaz/scalaz-core_2.11-7.1.5.jar",
         "scalaz/scalaz-concurrent_2.11-7.1.5.jar",
         "scalaz/scalaz-stream_2.11-0.8.jar",
+        "scalaz/scalaz-effect_2.11-7.1.5.jar",
     ],
 )
 
@@ -41,5 +42,14 @@ java_import(
     name = "scala-library",
     jars = [
         "scala-library/scala-library-2.11.7.jar",
+        "scala-library/scala-xml_2.11-1.0.5.jar",
+        "scala-library/scala-parser-combinators_2.11-1.0.4.jar",
+    ],
+)
+
+java_import(
+    name = "guava",
+    jars = [
+        "guava/guava-16.0.1.jar",
     ],
 )

@@ -5,12 +5,12 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.WordSpec
 
 @RunWith(classOf[JUnitRunner])
-class BarScalaTest extends WordSpec {
+class BazScalaTest extends WordSpec {
 
   "Baz" should {
     "have the correct age" in {
       assert(new Baz().age === 20)
-      assert(1 === 2)
+      // assert(1 === 2)
     }
   }
 }
