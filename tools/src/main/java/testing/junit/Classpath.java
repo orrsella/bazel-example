@@ -35,14 +35,14 @@ final class Classpath {
   /**
    * Finds all classes that live in the given jars.
    */
-  static Set<Class<?>> findClasses(Set<String> jarNames) {
+  static Set<Class<?>> findClasses(Set<String> jars) {
     Set<Class<?>> result = new LinkedHashSet<>();
 
     for (String entryName : getClassPath()) {
       File classPathEntry = new File(entryName);
       if (classPathEntry.exists()) {
         try {
-          if (!classPathEntry.isDirectory() && jarNames.contains(classPathEntry.getName())) {
+          if (!classPathEntry.isDirectory() && jars.contains(classPathEntry.getName())) {
             for (String className : findClassesInJar(classPathEntry)) {
               Class<?> clazz = Class.forName(className);
               result.add(clazz);

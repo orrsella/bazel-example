@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class JarSuite extends Suite {
-  private static final String JAR_NAMES_PROPERTY = "testing.junit.jars";
+  private static final String JARS_PROPERTY = "testing.junit.jars";
   private static final String JARS_SEPARATOR = ",";
 
   /**
@@ -32,11 +32,11 @@ public class JarSuite extends Suite {
   }
 
   private static Class<?>[] getClasses(Class<?> klass) {
-    Set<String> jarNames = new HashSet<>();
-    String propertyValue = System.getProperty(JAR_NAMES_PROPERTY);
-    jarNames.addAll(Arrays.asList(propertyValue.split(JARS_SEPARATOR)));
+    Set<String> jars = new HashSet<>();
+    String propertyValue = System.getProperty(JARS_PROPERTY);
+    jars.addAll(Arrays.asList(propertyValue.split(JARS_SEPARATOR)));
 
-    Set<Class<?>> result = new TestSuiteBuilder().addJarsRecursive(jarNames).create();
+    Set<Class<?>> result = new TestSuiteBuilder().addJarsRecursive(jars).create();
     return result.toArray(new Class<?>[result.size()]);
   }
 }

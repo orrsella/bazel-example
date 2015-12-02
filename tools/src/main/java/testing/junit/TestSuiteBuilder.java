@@ -45,16 +45,16 @@ public final class TestSuiteBuilder {
     return this;
   }
 
-  public TestSuiteBuilder addJarsRecursive(Set<String> jarNames) {
-    for (Class<?> c : getClassesRecursive(jarNames)) {
+  public TestSuiteBuilder addJarsRecursive(Set<String> jars) {
+    for (Class<?> c : getClassesRecursive(jars)) {
       addTestClass(c);
     }
     return this;
   }
 
-  private Set<Class<?>> getClassesRecursive(Set<String> jarNames) {
+  private Set<Class<?>> getClassesRecursive(Set<String> jars) {
     Set<Class<?>> result = new LinkedHashSet<>();
-    for (Class<?> clazz : Classpath.findClasses(jarNames)) {
+    for (Class<?> clazz : Classpath.findClasses(jars)) {
       if (isTestClass(clazz)) {
         result.add(clazz);
       }
