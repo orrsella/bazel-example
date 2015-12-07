@@ -32,7 +32,7 @@ java_import(
         ":hamcrest",
         ":kind-projector",
         ":scalaz",
-        ":scodec",
+        ":scodec-bits",
     ],
 )
 
@@ -78,8 +78,8 @@ java_import(
 )
 
 java_import(
-    name = "scodec",
+    name = "scodec-bits",
     jars = [
-        "scodec/scodec-bits_" + SCALA_VER + "-1.0.9.jar",
+        "scodec-bits/scodec-bits_" + SCALA_VER + "-1.0.9.jar",
     ],
 )
