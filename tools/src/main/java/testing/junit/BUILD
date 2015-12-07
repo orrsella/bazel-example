@@ -5,6 +5,6 @@ java_library(
     srcs = glob(["*.java"]),
     deps = [
         "//third_party:guava",
-        "//third_party:junit4",
+        "//third_party:junit",
     ],
 )

@@ -33,6 +33,7 @@ public class JarSuite extends Suite {
 
   private static Class<?>[] getClasses(Class<?> klass) {
     Set<String> jars = new HashSet<>();
+    // TODO: what if property doesn't exist or is null?
     String propertyValue = System.getProperty(JARS_PROPERTY);
     jars.addAll(Arrays.asList(propertyValue.split(JARS_SEPARATOR)));
 

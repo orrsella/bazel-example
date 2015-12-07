@@ -4,7 +4,7 @@ java_test(
     size = "small",
     deps = [
         "//mixed-lib/src/main/java/com/example:java",
-        "//third_party:junit4",
+        "//third_party:junit",
     ],
 )
 
@@ -19,6 +19,6 @@ java_test(
     size = "small",
     deps = [
         ":mixed-lib-scala",
-        "//third_party:junit4",
+        "//third_party:junit",
     ],
 )

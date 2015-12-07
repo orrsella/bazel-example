@@ -1,6 +1,6 @@
 bind(
     name = "junit",
-    actual = "//third_party:junit4",
+    actual = "//third_party:junit",
 )
 
 bind(

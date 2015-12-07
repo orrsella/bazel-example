@@ -33,7 +33,7 @@ def scala_test(
   )
 
   native.java_test(
-      name = name + "java-test",
+      name = name,
       args = ["testing.junit.RunAllTestsInJar"],
       jvm_flags = jvm_flags + ["-Dtesting.junit.jars=" + name + "-lib_deploy.jar"],
       size = "small",

@@ -10,7 +10,6 @@ class BazScalaTest extends WordSpec {
   "Baz" should {
     "have the correct age" in {
       assert(new Baz().age === 20)
-      // assert(1 === 2)
     }
   }
 }
