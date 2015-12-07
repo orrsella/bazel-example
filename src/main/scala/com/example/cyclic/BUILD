@@ -6,7 +6,7 @@ scala_library(
     name = "scala",
     srcs = ["ScalaCycle.scala"],
     deps = [
-        "//third_party:scala-library",
         "//src/main/java/com/example/cyclic:java",
+        "//third_party:scala-library",
     ]
 )
