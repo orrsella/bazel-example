@@ -7,6 +7,6 @@ scala_library(
     srcs = ["ScalaCycle.scala"],
     deps = [
         "//third_party:scala-library",
-        "//mixed-lib/src/main/java/com/example/cyclic:java",
+        "//src/main/java/com/example/cyclic:java",
     ]
 )

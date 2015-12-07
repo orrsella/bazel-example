@@ -1,4 +1,7 @@
-package com.example
+package com.example.main
+
+import com.example.Bar
+import com.example.Baz
 
 object Main {
   def main(args: Array[String]): Unit = {

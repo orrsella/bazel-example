@@ -3,14 +3,14 @@ java_test(
     srcs = glob(["BarTest.java"]),
     size = "small",
     deps = [
-        "//mixed-lib/src/main/java/com/example:java",
+        "//src/main/java/com/example:java",
         "//third_party:junit",
     ],
 )
 
 java_import(
-    name = "mixed-lib-scala",
-    jars = ["//mixed-lib/src/main/scala/com/example:scala"],
+    name = "scala-import",
+    jars = ["//src/main/scala/com/example:scala"],
 )
 
 java_test(
@@ -18,7 +18,7 @@ java_test(
     srcs = glob(["BazTest.java"]),
     size = "small",
     deps = [
-        ":mixed-lib-scala",
+        ":scala-import",
         "//third_party:junit",
     ],
 )
