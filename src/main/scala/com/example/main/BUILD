@@ -1,4 +1,4 @@
-load("/tools/build_defs/scala/scala", "scala_binary")
+load("/build_tools/rules/scala/scala", "scala_binary")
 
 scala_binary(
     name = "scala-binary",
@@ -7,6 +7,5 @@ scala_binary(
     deps = [
         "//src/main/java/com/example:java",
         "//src/main/scala/com/example:scala",
-        "//third_party:scala-library",
     ],
 )

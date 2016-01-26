@@ -1,4 +1,4 @@
-load("/tools/build_defs/scala/scala-test", "scala_test")
+load("/build_tools/rules/scala/scala", "scala_test")
 
 scala_test(
     name = "test",

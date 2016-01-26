@@ -8,17 +8,13 @@ java_test(
     ],
 )
 
-java_import(
-    name = "scala-import",
-    jars = ["//src/main/scala/com/example:scala"],
-)
-
 java_test(
     name = "test-scala",
     srcs = glob(["BazTest.java"]),
     size = "small",
     deps = [
-        ":scala-import",
+        "//src/main/scala/com/example:scala_deploy.jar",
         "//third_party:junit",
+        "//third_party:scala-library",
     ],
 )

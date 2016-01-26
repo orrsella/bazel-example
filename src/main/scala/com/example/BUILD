@@ -1,11 +1,8 @@
 package(default_visibility = ["//visibility:public"])
 
-load("/tools/build_defs/scala/scala", "scala_library")
+load("/build_tools/rules/scala/scala", "scala_library")
 
 scala_library(
     name = "scala",
     srcs = glob(["*.scala"]),
-    deps = [
-        "//third_party:scala-library",
-    ]
 )
